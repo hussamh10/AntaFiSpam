@@ -17,7 +17,7 @@ def getDataSet():
         DS.addSample(X[i], Y[i])        
         i+=1
 
-    TrainDS, TestDS = DS.splitWithProportion(0.8)
+    TrainDS, TestDS = DS.splitWithProportion(0.7)
 
     return TrainDS, TestDS
 

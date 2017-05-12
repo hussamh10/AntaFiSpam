@@ -23,7 +23,7 @@ def main():
     print("Network Built")
     print("Training...")
 
-    trainer = network.train(net, Training_DS, epoch = 1)
+    trainer = network.train(net, Training_DS, epoch = 300)
     print("Trained")
     print("Testing..")
     test(net, Testing_DS, trainer)
