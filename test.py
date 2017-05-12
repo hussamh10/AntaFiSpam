@@ -1,4 +1,4 @@
-from pybrain.datasets import SupervisedDataSet
+0from pybrain.datasets import SupervisedDataSet
 from pybrain.tools.shortcuts import buildNetwork
 from pybrain.supervised.trainers import BackpropTrainer
 from getFeatures import getFeatures
@@ -23,7 +23,7 @@ def main():
     print("Network Built")
     print("Training...")
 
-    trainer = network.train(net, Training_DS, epoch = 300)
+    trainer = network.train(net, Training_DS, epoch = 3000)
     print("Trained")
     print("Testing..")
     test(net, Testing_DS, trainer)
