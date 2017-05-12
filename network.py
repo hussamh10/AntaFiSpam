@@ -17,25 +17,16 @@ def getDataSet():
         DS.addSample(X[i], Y[i])        
         i+=1
 
-    return DS
+    TrainDS, TestDS = DS.splitWithProportion(0.8)
+
+    return TrainDS, TestDS
 
 def build(length):
     net = buildNetwork(length, 5, 4, 1)
     return net
 
-def train(net, DS):
+def train(net, DS, epoch = 3000):
+    print(epoch)
     trainer = BackpropTrainer(net, DS)
-    trainer.trainOnDataset(DS, 100)
-
-def main():
-
-    print("Extracting Features...")
-    DS = getDataSet()
-    print("Features Extracted")
-    print("Building Network...")
-    net = build(10)
-    print("Network Built")
-    print("Training...")
-    train(net, DS)
-    return net
-main()
+    trainer.trainOnDataset(DS, epoch)
+    return trainer
