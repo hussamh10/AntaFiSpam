@@ -1,4 +1,4 @@
-0from pybrain.datasets import SupervisedDataSet
+from pybrain.datasets import SupervisedDataSet
 from pybrain.tools.shortcuts import buildNetwork
 from pybrain.supervised.trainers import BackpropTrainer
 from getFeatures import getFeatures
